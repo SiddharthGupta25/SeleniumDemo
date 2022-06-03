@@ -14,9 +14,11 @@ Following are the instructions to get this framework up and running:
    <li>	Ensure that you have python 3 installed. Clone this repository and it will create a folder named “SeleniumDemo”</li>
     <li>Change directory to this folder and run the following command which will create a virtual environment </li>
    <pre>python -m venv VENV</pre>
+   Open command command prompt inside the created virtual environment folder and change the directory to "Scripts" type "activate.bat" to activate the virtual enviroment before proceeding. 
+   <pre><b>Note:</b> If you get an error then you have to open Windows Powershell as an admin and set the execution policy to Unrestricted. Use the following command to do so: <code>Set-ExecutionPolicy Unrestricted </code> and try again activation the environemnt</pre>
     <li>3.	Install the required dependencies using the following commands </li>
-   <pre> a.	Pip install selenium</pre>
-   <pre>b.	Pip install pytest </pre>
+   <pre><code>Pip install selenium </code></pre>
+   <pre><code>Pip install pytest </code> </pre>
    <li> Download allure reports from the following url and add its bin folder to SYSTEM PATH: 
     <pre> https://docs.qameta.io/allure/  </li> </pre> 
 </ul>
