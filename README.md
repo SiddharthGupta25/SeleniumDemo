@@ -24,7 +24,9 @@ Following are the instructions to get this framework up and running:
    <pre><code>Pip install allure-pytest </code> </pre>
    If you're using an IDE like PyCharm then add these dependencies to the cloned project repository accordingly 
    <li> Download allure reports from the following url and add its bin folder to SYSTEM PATH: 
-    <a href=" https://docs.qameta.io/allure/  "> https://docs.qameta.io/allure/  </a> </pre> 
+    <pre> 
+      <a href=" https://docs.qameta.io/allure/"> https://docs.qameta.io/allure/  </a> 
+   </pre> 
 </ul>
 
 ## Executing the Test Cases
