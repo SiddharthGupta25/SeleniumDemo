@@ -1,7 +1,6 @@
-# Test Automation Framework Using Selenium 4
+# Hybrid Test Automation Framework Using Selenium 4
 
-Proof of concept of a test automation framework with selenium over python 3 (v3.10) as language binding. The following codebase is built upon the popular page object model design pattern to keep the test cases and pages decoupled from each other and comprises of the following directories:
-Configurations: The config.json file comprises of initial configurations such as the base URL of the application under test, i.e. the entry point of the test cases to be executed. 
+Proof of concept of a test automation framework with selenium over python 3 (v3.10) as language binding. The following codebase is built upon the popular page object model design pattern via PyTest library to keep the test cases and pages decoupled from each other and comprises of the following directories:
 <ul>
    <li>
       <b>Configurations:</b> The config.json file comprises of initial configurations such as the base URL of the application under test, i.e. the entry point of the test cases to be executed. Please provide the username and password as base64 encoded strings in this file. They will be decoded to plain text during the test runs
@@ -18,27 +17,35 @@ Following are the instructions to get this framework up and running:
     <li>Change directory to this folder and run the following command which will create a virtual environment </li>
    <pre>python -m venv VENV</pre>
    Open command command prompt inside the created virtual environment folder and change the directory to "Scripts" type "activate.bat" to activate the virtual enviroment before proceeding. 
-   <b>Note:</b> If you get an error then you have to open Windows Powershell as an admin and set the execution policy to Unrestricted. Use the following command to do so: <code>Set-ExecutionPolicy Unrestricted </code> and try again activation the environemnt
-    <li>3.	Install the required dependencies using the following commands </li>
+   <b>Note:</b> If you get an error then you have to open Windows Powershell as an admin and set the execution policy to Unrestricted. Use the following command to do so: <code>Set-ExecutionPolicy Unrestricted </code> and try again activating the environemnt
+    <li>Install the required dependencies using the following commands: </li>
    <pre><code>Pip install selenium </code></pre>
    <pre><code>Pip install pytest </code> </pre>
    <pre><code>Pip install allure-pytest </code> </pre>
    If you're using an IDE like PyCharm then add these dependencies to the cloned project repository accordingly 
    <li> Download allure reports from the following url and add its bin folder to SYSTEM PATH: 
-    <pre> https://docs.qameta.io/allure/  </li> </pre> 
+    <a href=" https://docs.qameta.io/allure/  "> https://docs.qameta.io/allure/  </a> </pre> 
 </ul>
 
 ## Executing the Test Cases
 
 In order to execute the test cases please use either of the following commands: 
-<pre>pytest -v -s TestCases\ </pre>
+
+<pre>
+<code> pytest -v -s TestCases\ </code>
+</pre>
+
+This command however, will only execute the test cases, no allure reports will be generated and the default browser is configured to be Edge. To generate the reports alongside, use the command below: 
+
 
 ### Executing the Test Cases & Generating Allure Reports 
-This command will only execute the test cases, no allure reports will be generated and the default browser is configured to be Edge 
-<pre>pytest -v -s TestCases\ --alluredir=".\Reports"</pre>
+
+<pre>
+   <code>  pytest -v -s TestCases\ --alluredir=".\Reports" </code>
+</pre>
 
 ### Viewing Generated Allure Reports 
-This command will execute the test cases as well as generate the allure reports. In order to see the generated reports run the following commands from the terminal
+This command will execute the test cases as well as generate the allure reports in a format which is not user friendly enough. In order to see the generated reports in a legible format, run the following commands from the terminal (ensure to run these commands from the project root)
 <pre>
    cd Reports
    allure serve .
@@ -55,7 +62,7 @@ This supports the following browsers
 Use the <code>--browser</code> option to specify a browser, if no browser is specified the test cases will run on Edge by default. Below is the actual usage of the option
 
 <pre>
-   pytest -v -s TestCases\ --alluredir=".\Reports" --browser [chrome|firefox]
+  <code> pytest -v -s TestCases\ --alluredir=".\Reports" --browser [chrome|firefox] </code>
 </pre>
 
 ## Adding A Github Token 
