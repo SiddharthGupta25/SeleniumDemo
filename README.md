@@ -16,17 +16,18 @@ Following are the instructions to get this framework up and running:
    <li>	Ensure that you have python 3 installed. Clone this repository and it will create a folder named “SeleniumDemo”</li>
     <li>Change directory to this folder and run the following command which will create a virtual environment </li>
    <pre>python -m venv VENV</pre>
-   Open command command prompt inside the created virtual environment folder and change the directory to "Scripts" type "activate.bat" to activate the virtual enviroment before proceeding. 
-   <b>Note:</b> If you get an error then you have to open Windows Powershell as an admin and set the execution policy to Unrestricted. Use the following command to do so: <code>Set-ExecutionPolicy Unrestricted </code> and try again activating the environemnt
+   Open command command prompt inside the created virtual environment folder and change the directory to "Scripts" type "activate.bat" and hit enter to activate the virtual enviroment before proceeding. <br/> <br/>
+   <b>Note:</b> If you get an error related to activation of the environment, then you have to open Windows Powershell as an admin and set the execution policy to Unrestricted. Use the following command to do so: <code>Set-ExecutionPolicy Unrestricted </code> and try again activating the environemnt. 
+   <br/> <br/>
     <li>Install the required dependencies using the following commands: </li>
-   <pre><code>Pip install selenium </code></pre>
-   <pre><code>Pip install pytest </code> </pre>
-   <pre><code>Pip install allure-pytest </code> </pre>
-   If you're using an IDE like PyCharm then add these dependencies to the cloned project repository accordingly 
-   <li> Download allure reports from the following url and add its bin folder to SYSTEM PATH: </li>
-    <pre> 
-      <a href=" https://docs.qameta.io/allure/"> https://docs.qameta.io/allure/  </a> 
-   </pre> 
+   <pre><code>pip install selenium </code></pre>
+   <pre><code>pip install pytest </code> </pre>
+   <pre><code>pip install allure-pytest </code> </pre>
+   <pre><code>pip install webdriver_manager </code> </pre>
+ 
+   <li> Download allure reports from the following url: </li> <br/>
+      <a href="https://docs.qameta.io/allure/"> https://docs.qameta.io/allure/  </a>  <br/>
+   Add its bin folder's path to SYSTEM PATH for ease. 
 </ul>
 
 ## Executing the Test Cases
@@ -61,7 +62,7 @@ This supports the following browsers
    <li>Mozilla Firefox</li>
 </ul>
 
-Use the <code>--browser</code> option to specify a browser, if no browser is specified the test cases will run on Edge by default. Below is the actual usage of the option
+Use the <code>--browser</code> option to specify a browser, if no browser is specified the test cases will run on Edge by default. Below is the actual usage of the option:
 
 <pre>
   <code> pytest -v -s TestCases\ --alluredir=".\Reports" --browser [chrome|firefox] </code>
