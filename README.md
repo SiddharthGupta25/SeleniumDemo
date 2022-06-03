@@ -23,7 +23,7 @@ Following are the instructions to get this framework up and running:
    <pre><code>Pip install pytest </code> </pre>
    <pre><code>Pip install allure-pytest </code> </pre>
    If you're using an IDE like PyCharm then add these dependencies to the cloned project repository accordingly 
-   <li> Download allure reports from the following url and add its bin folder to SYSTEM PATH: 
+   <li> Download allure reports from the following url and add its bin folder to SYSTEM PATH: </li>
     <pre> 
       <a href=" https://docs.qameta.io/allure/"> https://docs.qameta.io/allure/  </a> 
    </pre> 
@@ -67,7 +67,7 @@ Use the <code>--browser</code> option to specify a browser, if no browser is spe
   <code> pytest -v -s TestCases\ --alluredir=".\Reports" --browser [chrome|firefox] </code>
 </pre>
 
-## Adding A Github Token 
+## Generating A Github Token 
 When using firefox, you might encounter an error stating that the maximum limit has reached and authentication is required, in such a case you need to generate a gurhub authorization token and add it as a USER PATH variable. In order to generate a github token follow the given steps:
 
 <ol>
@@ -81,8 +81,9 @@ When using firefox, you might encounter an error stating that the maximum limit 
    <li>Click on "Generate Token"</li>
 </ol>
 
-copy the value of the token and save it as a user path variable named GH_TOKEN (This name has to be GH_TOKEN). Follow the steps below to do the same:
+copy the value of the token and save it as a user path variable by Following the steps below to do the same:
 
+## Adding A Github Token In User Path Variable
 <ol>
    <li>Click on Start Menu and open Run</li>
    <li>Type in "sysdm.cpl" (without quotes) and hit enter</li>
