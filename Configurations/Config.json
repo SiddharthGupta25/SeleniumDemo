@@ -1,0 +1,8 @@
+{
+    "url" : "https://accounts.lambdatest.com/login",
+    "username" : "",
+    "password" : "",
+    "screenshotpath" : ".\\Screenshots",
+    "datafilepath" :  ".\\TestData\\Sample.csv"
+}
+
